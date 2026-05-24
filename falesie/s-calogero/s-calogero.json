@@ -1,0 +1,16 @@
+{
+    "Settore Sotto": [
+        {"Nome": "SocioCAIfondatore",   "Grado": "4b",      "Altezza": "20m", "Descrizione": ""},
+        {"Nome": "SocioCAIfondatore",   "Grado": "5b",      "Altezza": "-", "Descrizione": ""},
+        {"Nome": "SocioCAIfondatore",   "Grado": "4a",      "Altezza": "-", "Descrizione": ""},
+        {"Nome": "SocioCAIfondatore",   "Grado": "5c",      "Altezza": "-", "Descrizione": ""},
+        {"Nome": "SocioCAIfondatore",   "Grado": "5b",      "Altezza": "-", "Descrizione": ""}
+    ],
+    "Settore Sopra": [
+        {"Nome": "MeV",                 "Grado": "5c",      "Altezza": "?", "Descrizione": ""},
+        {"Nome": "Azzero",              "Grado": "4a",      "Altezza": "?", "Descrizione": ""},
+        {"Nome": "Epifanio",            "Grado": "6a",      "Altezza": "?", "Descrizione": ""},
+        {"Nome": "Camino",              "Grado": "5c",      "Altezza": "?", "Descrizione": ""},
+        {"Nome": "Senza nome",          "Grado": "4a",      "Altezza": "?", "Descrizione": ""}
+    ]
+}

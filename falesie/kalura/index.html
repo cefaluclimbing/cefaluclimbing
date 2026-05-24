@@ -1,0 +1,46 @@
+<section class="titolo-5pizzi d-flex justify-content-center align-items-center">
+    <div class="contenuto text-secondary text-center d-flex flex-column align-items-center row-gap-1">
+        <p>Falesia della</p>
+        <h1>Kalura</h1>
+        <a onclick="loadPage('./falesie/kalura/coordinate/index.html')" class="btn btn-primary">Posizione</a>
+    </div>
+</section>
+<section class="contenitore">
+    <div class="indice">
+        <p>Settori:</p>
+        <div class="falesie d-flex container mx-auto">
+            <div class="colonna-settori">
+                <!-- Modificato con onclick per lo scorrimento fluido -->
+                <a onclick="document.getElementById('Placcone').scrollIntoView({ behavior: 'smooth' })" style="cursor: pointer;">
+                    <img src="../../assets/img/falesie/kalura.webp" alt="">
+                    <p>Placcone</p>
+                </a>
+            </div>
+            <div class="colonna-settori">
+                <a onclick="document.getElementById('Muro').scrollIntoView({ behavior: 'smooth' })" style="cursor: pointer;">
+                    <img src="../../assets/img/falesie/5pizzi.webp" alt="">
+                    <p>Muro</p>
+                </a>
+            </div>
+            <div class="colonna-settori">
+                <a onclick="document.getElementById('Storia').scrollIntoView({ behavior: 'smooth' })" style="cursor: pointer;">
+                    <img src="../../assets/img/falesie/5pizzi.webp" alt="">
+                    <p>Storia</p>
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
+<section>
+    <div class="tabelle" data-json="./falesie/kalura/kalura.json">
+        <p class="settori" id="Placcone">Placcone</p>
+        <div class="div-tabella" data-settore="Placcone" id="tabella"></div>
+        <hr />
+        <p class="settori" id="Muro">Muro</p>
+        <div class="div-tabella" data-settore="Muro" id="tabella"></div>
+        <hr />
+        <p class="settori" id="Storia">Storia</p>
+        <div class="div-tabella" data-settore="Storia" id="tabella"></div>
+        <hr />
+    </div>
+</section>

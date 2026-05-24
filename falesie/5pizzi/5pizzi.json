@@ -1,0 +1,13 @@
+{
+    "Cinque Pizzi": [
+    {"Nome": "Spigolo boulder",     "Grado": "5c",  "Altezza": "-",     "Descrizione": "Azzerabile dall'alto"},
+    {"Nome": "Rampa appoggiata",    "Grado": "4c",  "Altezza": "30m",   "Descrizione": "Muro appoggiato"},
+    {"Nome": "Spigolo alto",        "Grado": "5c+", "Altezza": "-",     "Descrizione": "Simpatica"},
+    {"Nome": "Pancia",              "Grado": "5c",  "Altezza": "-",     "Descrizione": "Simpatica"},
+    {"Nome": "Vaschetta",           "Grado": "5c+", "Altezza": "-",     "Descrizione": "Simpatica"},
+    {"Nome": "Placca appoggiata",   "Grado": "5c",  "Altezza": "-",     "Descrizione": "Simpatica"},
+    {"Nome": "Placca dura",         "Grado": "6b",  "Altezza": "-",     "Descrizione": "Simpatica"},
+    {"Nome": "La 33",               "Grado": "5c+", "Altezza": "33m",   "Descrizione": "L2 5c 15m"},
+    {"Nome": "Variante",            "Grado": "5b",  "Altezza": "33m",   "Descrizione": "Simpatica"}
+    ]
+}

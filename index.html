@@ -1,0 +1,183 @@
+<!doctype html>
+<html lang="it">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cefalù Climbing - Home</title>
+    <link rel="shortcut icon" href="favicon.png" type="image/png" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="./falesie/kalura/kalura.css" />
+</head>
+
+<body>
+    <header>
+        <nav id="navbar" class="navbarclass">
+            <div>
+                <a href="javascript:void(0)" class="closebtn" id="menu-icon" onclick="closeNav()">&times;</a>
+                <a href="index.html">
+                    <img class="navbar-brand" src="./assets/img/navbar-logo.webp" alt="" />
+                </a>
+            </div>
+            <div class="menu-contain">
+                <a onclick="loadPage('home.html')" class="nav-link">Home</a>
+                <a onclick="loadPage('./contatti')" class="nav-link">Contatti</a>
+            </div>
+        </nav>
+        <span id="menu-icon" onclick="openNav()">&#9776;</span>
+    </header>
+
+    <script type="text/javascript">
+        function openNav() {
+            document.getElementById("navbar").style.display = "block";
+        }
+        function closeNav() {
+            document.getElementById("navbar").style.display = "none";
+        }
+    </script>
+
+    <main id="content-area">
+        <!-- In quest'area JavaScript caricherà i contenuti delle varie pagine -->
+    </main>
+
+    <script>
+        /**
+         * Genera dinamicamente le tabelle HTML leggendo i dati dal JSON fornito.
+         * Funziona in modo universale basandosi sugli attributi 'data-settore' presenti nella pagina.
+         */
+        function generaTabelleFalesia(jsonData, contenitore) {
+            const sezioniTabella = contenitore.querySelectorAll(".div-tabella");
+
+            sezioniTabella.forEach((targetDiv) => {
+                const nomeSettore = targetDiv.getAttribute("data-settore");
+                const datiSettore = jsonData[nomeSettore];
+
+                // Se non ci sono dati nel JSON per questo specifico settore, lo salta
+                if (!datiSettore || datiSettore.length === 0) return;
+
+                targetDiv.innerHTML = ""; // Svuota vecchi residui caricati in precedenza
+
+                const table = document.createElement("table");
+                const thead = table.insertRow();
+
+                // Intestazione per il numero progressivo di riga (#)
+                const thNumero = document.createElement("th");
+                thNumero.classList.add("title-cell");
+                thead.appendChild(thNumero);
+
+                // Genera le intestazioni delle colonne usando le chiavi del primo oggetto del settore
+                for (const key in datiSettore[0]) {
+                    const th = document.createElement("th");
+                    th.textContent = key;
+                    th.classList.add("title-cell");
+                    thead.appendChild(th);
+                }
+
+                // Popola le righe con le vie di arrampicata
+                datiSettore.forEach((item, index) => {
+                    const row = table.insertRow();
+
+                    // Cella del numero progressivo
+                    const cellNumero = row.insertCell();
+                    cellNumero.textContent = index + 1;
+                    cellNumero.classList.add("numero-riga");
+
+                    // Celle dei dati effettivi (Nome, Grado, ecc.)
+                    for (const key in item) {
+                        const cell = row.insertCell();
+                        cell.textContent = item[key];
+                        cell.classList.add("table-cell");
+                    }
+                });
+
+                targetDiv.appendChild(table);
+            });
+        }
+
+        /**
+         * Carica dinamicamente una pagina HTML all'interno della cornice principale
+         * @param {string} pageUrl - Il percorso del file HTML da caricare
+         * @param {boolean} addToHistory - Se true salva il movimento nella cronologia del browser
+         */
+        async function loadPage(pageUrl, addToHistory = true) {
+            const contentArea = document.getElementById("content-area");
+
+            try {
+                contentArea.innerHTML = "<p>Caricamento in corso...</p>";
+
+                const response = await fetch(pageUrl);
+                if (!response.ok) {
+                    throw new Error(`Errore nel caricamento: ${response.status}`);
+                }
+
+                const html = await response.text();
+                contentArea.innerHTML = html;
+
+                // Gestione della cronologia (permette l'uso delle frecce Avanti/Indietro del browser)
+                if (addToHistory) {
+                    history.pushState({ url: pageUrl }, "", "");
+                }
+
+                // Controllo automatico tabelle: verifica se la pagina appena inserita richiede dei dati JSON
+                const contenitoreTabelle = contentArea.querySelector(
+                    ".tabelle[data-json]",
+                );
+
+                if (contenitoreTabelle) {
+                    const percorsoJson = contenitoreTabelle.getAttribute("data-json");
+
+                    const jsonResponse = await fetch(percorsoJson);
+                    if (jsonResponse.ok) {
+                        const jsonData = await jsonResponse.json();
+
+                        // 1. Costruisce le tabelle nella pagina
+                        generaTabelleFalesia(jsonData, contenitoreTabelle);
+
+                        // 2. Gestione ancore dell'indice: se nell'URL c'è un hash (es #Muro), si sposta lì
+                        if (window.location.hash) {
+                            const targetId = window.location.hash.substring(1);
+                            const targetElement = document.getElementById(targetId);
+                            if (targetElement) {
+                                // Il piccolo timeout garantisce che il browser abbia finito il rendering grafico delle tabelle
+                                setTimeout(() => {
+                                    targetElement.scrollIntoView({ behavior: "smooth" });
+                                }, 100);
+                            }
+                        }
+                    } else {
+                        console.error(
+                            `Impossibile trovare il file JSON in: ${percorsoJson}`,
+                        );
+                    }
+                }
+            } catch (error) {
+                contentArea.innerHTML = `<p style="color: red;">Impossibile caricare la pagina. Errore: ${error.message}</p>`;
+            }
+        }
+
+        // Ascoltatore globale per i tasti Avanti/Indietro
+        window.addEventListener("popstate", (event) => {
+            // Se il cambio di stato ha un URL salvato nella cronologia, lo carichiamo
+            if (event.state && event.state.url) {
+                loadPage(event.state.url, false);
+            } else {
+                /* 
+                 PROTEZIONE ANCORE: 
+                 Se l'utente ha usato un'ancora (#), non resettare alla home.html,
+                 lascia che il browser gestisca lo scorrimento della pagina corrente.
+              */
+                if (!window.location.hash) {
+                    loadPage("home.html", false);
+                }
+            }
+        });
+
+        // Al primo avvio assoluto del sito, inizializza la cronologia e carica la home.html
+        window.onload = () => {
+            history.replaceState({ url: "home.html" }, "", "");
+            loadPage("home.html", false);
+        };
+    </script>
+</body>
+
+</html>
