@@ -4,10 +4,9 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Cefalù Climbing - Home</title>
+    <title>Cefalù Climbing</title>
     <link rel="shortcut icon" href="favicon.png" type="image/png" />
     <link rel="stylesheet" href="style.css" />
-    <link rel="stylesheet" href="./falesie/kalura/kalura.css" />
 </head>
 
 <body>
@@ -21,6 +20,8 @@
             </div>
             <div class="menu-contain">
                 <a onclick="loadPage('home.html')" class="nav-link">Home</a>
+                <a onclick="loadPage('./falesie/kalura/coordinate')" class="nav-link">Falesie</a>
+                <a onclick="loadPage('./vie')" class="nav-link">Multipitch</a>
                 <a onclick="loadPage('./contatti')" class="nav-link">Contatti</a>
             </div>
         </nav>
@@ -178,6 +179,7 @@
             loadPage("home.html", false);
         };
     </script>
+    <h1 style="display: none;">Cefalù Climbing</h1>
 </body>
 
 </html>

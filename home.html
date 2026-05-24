@@ -2,29 +2,37 @@
     <h2>Le Falesie</h2>
     <p>Le falesie sportive attualmente praticabili sulla rocca di Cefalù sono tre.</p>
     <div class="riga d-flex ms-3 container mx-auto">
+        <div class="colonna-falesie">
+            <a onclick="loadPage('./falesie/5pizzi')">
 
-        <a onclick="loadPage('./falesie/5pizzi')">
-            <div class="colonna-falesie">
-                <img src="./assets/img/falesie/5pizzi.webp" alt="">
+                <img src="./assets/img/icon/5pizzi.webp" alt="">
                 <h3>Cinque Pizzi</h3>
-        </a>
-        <p>Si raggiunge salendo lungo la scalinata dopo la biglietteria e si scavalca la rete prima del cancello.</p>
-    </div>
-
-    <a onclick="loadPage('./falesie/kalura')">
+            </a>
+            <p>Si raggiunge salendo lungo la scalinata dopo la biglietteria e si scavalca la rete prima del cancello.
+            </p>
+        </div>
         <div class="colonna-falesie">
-            <img src="./assets/img/falesie/kalura.webp" alt="">
-            <h3>Kalura</h3>
-    </a>
-    <p>Settore principale. Dietro il cimitero.</p>
-    </div>
+            <a onclick="loadPage('./falesie/kalura')">
 
-    <a onclick="loadPage('./falesie/s-calogero')">
+                <img src="./assets/img/icon/kalura.webp" alt="">
+                <h3>Kalura</h3>
+            </a>
+            <p>Settore principale. Dietro il cimitero.</p>
+        </div>
         <div class="colonna-falesie">
-            <img src="./assets/img/falesie/s-calogero.webp" alt="">
-            <h3>S. Calogero</h3>
-    </a>
-    <p>Alla sinistra dell'ingresso del cimitero imboccare la strada che sale.</p>
+            <a onclick="loadPage('./falesie/s-calogero')">
+
+                <img src="./assets/img/icon/s-calogero.webp" alt="">
+                <h3>S. Calogero</h3>
+            </a>
+            <p>Alla sinistra dell'ingresso del cimitero imboccare la strada che sale.</p>
+        </div>
     </div>
+</section>
+<section style="background-image: url(./assets/img/vie/luna_piena.webp);" class="copertina-vuota d-flex justify-content-center align-items-center">
+    <div class="contenuto text-secondary text-center d-flex flex-column align-items-center row-gap-3">
+        <p>Guide per le nostre</p>
+        <h3 style="font-size: 3rem;">Multipitch</h3>
+        <a onclick="loadPage('./vie')" class="btn btn-primary">INFORMAZIONI</a>
     </div>
 </section>
