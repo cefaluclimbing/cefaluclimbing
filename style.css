@@ -298,7 +298,7 @@ a{
     border-color: #ffc800;
 }
 .titolo-5pizzi{
-    background-image: url(../../assets/img/falesie/kalura.webp);
+    background-image: url(./assets/img/falesie/kalura.webp);
     background-size: cover;
     background-position: center;
     min-height: 40vh;
@@ -411,7 +411,7 @@ hr{
     font-size: 48px;
     font-weight: bold;
     font-style: italic;
-    background-image: url(../../assets/img/falesie/kalura.webp);
+    background-image: url(./assets/img/falesie/kalura.webp);
     background-size: cover;
     background-position: center;
     min-height: 150px;
