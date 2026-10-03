@@ -1,20 +1,20 @@
 {
     "Settore Sotto la luna": [
-        {"Nome": "Schiena del gatto",       "Grado": "5a",      "Altezza": "22m", "Descrizione": "Lungo la cresta"},
-        {"Nome": "Angelo silenzioso",       "Grado": "5b",      "Altezza": "23m", "Descrizione": ""},
-        {"Nome": "Presidente Jack",         "Grado": "5b+",     "Altezza": "25m", "Descrizione": ""},
-        {"Nome": "La salita del lupo PaCu", "Grado": "5b",      "Altezza": "25m", "Descrizione": "12 rinvii"},
-        {"Nome": "Undici",                  "Grado": "4b",      "Altezza": "14m", "Descrizione": ""},
-        {"Nome": "Max",                     "Grado": "5c+",     "Altezza": "14m", "Descrizione": ""},
-        {"Nome": "Holly",                   "Grado": "4a",      "Altezza": "13m", "Descrizione": ""},
-        {"Nome": "Ladro di pastelli",       "Grado": "5b",      "Altezza": "22m", "Descrizione": ""},
-        {"Nome": "Luna nuova",              "Grado": "5a",      "Altezza": "21m", "Descrizione": "L0 di Epifanio, Luna piena"}
+        {"Nome": "Schiena del gatto", "Grado": "5a", "Altezza": "22m", "Descrizione": "Lungo la cresta"},
+        {"Nome": "Angelo silenzioso", "Grado": "5b", "Altezza": "23m", "Descrizione": ""},
+        {"Nome": "Presidente Jack", "Grado": "5b+", "Altezza": "25m", "Descrizione": ""},
+        {"Nome": "La salita del lupo PaCu", "Grado": "5b", "Altezza": "25m", "Descrizione": "12 rinvii"},
+        {"Nome": "Undici", "Grado": "4b", "Altezza": "14m", "Descrizione": ""},
+        {"Nome": "Max", "Grado": "5c+", "Altezza": "14m", "Descrizione": ""},
+        {"Nome": "Holly", "Grado": "4a", "Altezza": "13m", "Descrizione": ""},
+        {"Nome": "Ladro di pastelli", "Grado": "5b", "Altezza": "22m", "Descrizione": ""},
+        {"Nome": "Luna nuova", "Grado": "5a", "Altezza": "21m", "Descrizione": "L0 di Epifanio, Luna piena"}
     ],
     "Settore S. Calogero": [
-        {"Nome": "MeV",                 "Grado": "5c",          "Altezza": "?", "Descrizione": ""},
-        {"Nome": "Azzero",              "Grado": "4a",          "Altezza": "?", "Descrizione": "Deviazione iniziale per Luna piena"},
-        {"Nome": "Epifanio, L2, L3",    "Grado": "6a, 5b, 5c",  "Altezza": "?", "Descrizione": "Multipitch Luna piena"},
-        {"Nome": "Camino",              "Grado": "6a",          "Altezza": "?", "Descrizione": ""},
-        {"Nome": "Senza nome",          "Grado": "4c",          "Altezza": "?", "Descrizione": ""}
+        {"Nome": "MeV", "Grado": "5c", "Altezza": "?", "Descrizione": ""},
+        {"Nome": "Azzero", "Grado": "4a", "Altezza": "?", "Descrizione": "Deviazione iniziale per Luna piena"},
+        {"Nome": "Epifanio, L2, L3", "Grado": "6a, 5b, 5c", "Altezza": "?", "Descrizione": "Multipitch Luna piena"},
+        {"Nome": "Camino", "Grado": "6a", "Altezza": "?", "Descrizione": ""},
+        {"Nome": "Senza nome", "Grado": "4c", "Altezza": "?", "Descrizione": ""}
     ]
 }
