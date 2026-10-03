@@ -28,7 +28,7 @@
         {"Nome": "Senza nome",          "Grado": "5c",      "Altezza": "?", "Descrizione": ""},
         {"Nome": "Tornado of Souls",    "Grado": "5c",      "Altezza": "?", "Descrizione": "Placca iniziale e passo acrobatico in cima"},
         {"Nome": "Zombie",              "Grado": "6a+",     "Altezza": "?", "Descrizione": ""},
-        {"Nome": "Ski Jump",            "Grado": "6b",      "Altezza": "28m", "Descrizione": "15 rinvii. Placca appoggiata"}
+        {"Nome": "Ski Jump",            "Grado": "6b",      "Altezza": "28m", "Descrizione": "15 rinvii. Placca appoggiata"},
         {"Nome": "Senza nome",          "Grado": "5b",      "Altezza": "31m?", "Descrizione": "Diedro"}
     ],
     "Muro": [
