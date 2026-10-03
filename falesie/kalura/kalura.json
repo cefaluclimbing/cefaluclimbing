@@ -13,10 +13,10 @@
         {"Nome": "Senza nome",          "Grado": "?",       "Altezza": "20m", "Descrizione": ""},
         {"Nome": "Senza nome",          "Grado": "?",       "Altezza": "20m", "Descrizione": ""},
         {"Nome": "Lizard",              "Grado": "6a",      "Altezza": "18m", "Descrizione": ""},
-        {"Nome": "Cuore",               "Grado": "7a",       "Altezza": "?", "Descrizione": ""},
-        {"Nome": "Da chiodare",               "Grado": "?",       "Altezza": "?", "Descrizione": ""},
-        {"Nome": "Da chiodare",               "Grado": "?",       "Altezza": "?", "Descrizione": ""},
-        {"Nome": "Silvingolla Rock",  "Grado": "5c",      "Altezza": "19", "Descrizione": ""},
+        {"Nome": "Cuore 1",             "Grado": "6c",      "Altezza": "?", "Descrizione": ""},
+        {"Nome": "Cuore 2",             "Grado": "5c+",     "Altezza": "?", "Descrizione": ""},
+        {"Nome": "Cuore 3",             "Grado": "6a",      "Altezza": "?", "Descrizione": ""},
+        {"Nome": "Silvingolla Rock",    "Grado": "5c",      "Altezza": "19", "Descrizione": ""},
         {"Nome": "Ottavia",             "Grado": "5b",      "Altezza": "21m", "Descrizione": "11 rinvii. Placca appoggiata"},
         {"Nome": "Senza nome",          "Grado": "5b+",     "Altezza": "20m", "Descrizione": ""},
         {"Nome": "Alien",               "Grado": "5c",      "Altezza": "20m", "Descrizione": ""},
@@ -27,8 +27,9 @@
         {"Nome": "Senza nome",          "Grado": "5c",      "Altezza": "?", "Descrizione": ""},
         {"Nome": "Senza nome",          "Grado": "5c",      "Altezza": "?", "Descrizione": ""},
         {"Nome": "Tornado of Souls",    "Grado": "5c",      "Altezza": "?", "Descrizione": "Placca iniziale e passo acrobatico in cima"},
-        {"Nome": "Senza nome",          "Grado": "5c",      "Altezza": "?", "Descrizione": ""},
+        {"Nome": "Zombie",              "Grado": "6a+",     "Altezza": "?", "Descrizione": ""},
         {"Nome": "Ski Jump",            "Grado": "6b",      "Altezza": "28m", "Descrizione": "15 rinvii. Placca appoggiata"}
+        {"Nome": "Senza nome",          "Grado": "5b",      "Altezza": "31m?", "Descrizione": "Diedro"}
     ],
     "Muro": [
         {"Nome": "Guns 'n' Roses",      "Grado": "5c",      "Altezza": "?", "Descrizione": ""},
@@ -38,9 +39,9 @@
         {"Nome": "Helix",               "Grado": "5b",      "Altezza": "?", "Descrizione": ""}
     ],
     "Storia": [
-        {"Nome": "Friend",               "Grado": "6b",      "Altezza": "?", "Descrizione": ""},
+        {"Nome": "Friend",              "Grado": "6b",      "Altezza": "?", "Descrizione": ""},
         {"Nome": "Grottino",            "Grado": "6a",      "Altezza": "?", "Descrizione": "Camino articolato, poi aggettante"},
         {"Nome": "Carletto",            "Grado": "7a",      "Altezza": "?", "Descrizione": ""},
-        {"Nome": "Cappero",             "Grado": "5c",      "Altezza": "?", "Descrizione": "Camino articolato"}
+        {"Nome": "Cappero",             "Grado": "5c",      "Altezza": "?", "Descrizione": "Camino articolato."}
     ]
 }
